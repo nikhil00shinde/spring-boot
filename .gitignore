@@ -1,0 +1,20 @@
+# Compiled output
+/target/
+/build/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Secrets
+.env
+application-prod.yml
+application-secrets.yml
+
