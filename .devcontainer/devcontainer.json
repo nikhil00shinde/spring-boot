@@ -1,0 +1,37 @@
+{
+    "name": "LaptopDealer Java project",
+    "image": "mcr.microsoft.com/vscode/devcontainers/java:1.1.0-21-bullseye",
+   // Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+			},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"GitHub.copilot",
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "java -version",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"git": "os-provided",
+		"github-cli": "latest",
+            "ghcr.io/devcontainers/features/java:1": {
+            "version": "21", // Specify your desired JDK version
+            "installMaven": "true", // Set to true to install Maven
+            "installGradle": "false"
+        }
+	}
+}
